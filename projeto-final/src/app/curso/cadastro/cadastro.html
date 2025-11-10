@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Cadastrar Curso</mat-card-title>
+    <span class="spacer"></span>
+      <button mat-button routerLink="/curso/listagem">
+        <mat-icon>list</mat-icon>
+        Listagem
+      </button>
+  </mat-card-header>  
+  
+  <form [formGroup]="formCurso" (ngSubmit)="salvar()">
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Nome do Curso</mat-label>
+      <input matInput placeholder="Ex: Programação Web" formControlName="nome" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Carga Horária</mat-label>
+      <input matInput type="number" placeholder="Ex: 40" formControlName="cargaHoraria" required>
+    </mat-form-field>
+
+    <div class="example-button-row">
+      <button mat-flat-button color="primary" type="submit">Salvar</button>
+      <button mat-stroked-button color="warn" routerLink="/curso/listagem">Cancelar</button>
+    </div>    
+  </form>
+</mat-card>
