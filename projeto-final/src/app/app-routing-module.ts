@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
+  {path: '', redirectTo: 'curso/listagem', pathMatch: 'full'}, // Rota padrão primeira a ser chamada
   {path: 'curso', loadChildren: () => import('./curso/curso-module').then(m => m.CursoModule)}
 ];
 

@@ -14,12 +14,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { Editar } from './editar/editar';
 
 
 @NgModule({
   declarations: [
     Cadastro,
-    Listagem
+    Listagem,
+    Editar
   ],
   imports: [
     CommonModule,
